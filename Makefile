@@ -9,3 +9,6 @@ build-python-image:
 
 build-tinyproxy-image:
 	docker build -t tinyproxy-image:latest -f eq-tinyproxy-image/Dockerfile .
+
+build-datastore-image:
+	docker build -t datastore-emulator-image:latest -f eq-datastore-emulator-image/Dockerfile .

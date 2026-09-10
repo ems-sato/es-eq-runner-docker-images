@@ -5,8 +5,10 @@ This repository contains Dockerfiles used to build base images for:
 - Building the eQ Terraform base image ([terraform-deploy-image](eq-terraform-deploy-image/Dockerfile))
 - Building the Tinyproxy image [tinyproxy-image](eq-tinyproxy-image/Dockerfile)
 - Building the eQ Python deploy image [python-deploy-image](eq-python-deploy-image/Dockerfile)
+- Building the eQ Datastore emulator image [datastore-emulator-image](eq-datastore-emulator-image/Dockerfile)
 
-The first three images are used in Concourse pipelines to run the tasks above and the final image is used to connect to Concourse Kubernetes.
+The first three images are used in Concourse pipelines to run the tasks above. The eQ Python deploy is used to connect to Concourse Kubernetes.
+The Datastore emulator image is used to run the Google Cloud Datastore emulator in a container for local development and testing.
 
 ## Setting up the repo
 
@@ -24,4 +26,5 @@ To build the images use the `make` commands below:
 | `make build-terraform-image` | Build the terraform base image                   |
 | `make build-python-image`    | Build the python base image                      |
 | `make build-tinyproxy-image` | Build the tinyproxy image                        |
+| `make build-datastore-image` | Build the datastore emulator image               |
 

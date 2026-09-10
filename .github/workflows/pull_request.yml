@@ -9,7 +9,7 @@ jobs:
   docker-build-push:
     strategy:
       matrix:
-        images: [eq-k8s-helm-deploy-image, eq-terraform-deploy-image, eq-python-deploy-image, eq-tinyproxy-image]
+        images: [eq-k8s-helm-deploy-image, eq-terraform-deploy-image, eq-python-deploy-image, eq-tinyproxy-image, eq-datastore-emulator-image]
     permissions:
       contents: 'read'
       id-token: 'write'
